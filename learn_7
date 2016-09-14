@@ -1,0 +1,13 @@
+class Animal:
+    def __init__(self, name, sex, age):
+        self.name = name
+        self.sex = sex
+        self.age = age
+class Dog(Animal):
+    def __init__(self, name, sex, age, number):
+        Animal.__init__(self, name, sex, age)
+        self.number = number
+    def eat(self):
+        return self.name + 'is eating'
+d = Dog('wangcai', 'male', 3, 001)
+print d.eat()
